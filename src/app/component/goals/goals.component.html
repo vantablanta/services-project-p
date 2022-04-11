@@ -1,0 +1,11 @@
+<div class="container-fluid row  p-3">
+    <h1 class="text-center">Services Goals</h1>
+    <div *ngFor="let goal of goals" class="card col-md-3 p-3 m-3" style="width: 18rem;">
+        <div class="card-body ">
+            <h5 class="card-title">{{goal.name}}</h5>
+            <p class="card-text">{{goal.description}}</p>
+            <p>{{goal.date | date}}</p>
+        </div>
+        <fa-icon class = "text-primary" [icon]="faTrash"></fa-icon>
+    </div>
+</div>
