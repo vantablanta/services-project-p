@@ -6,6 +6,35 @@
             <p class="card-text">{{goal.description}}</p>
             <p>{{goal.date | date}}</p>
         </div>
-        <fa-icon class = "text-primary" (click)="deleteGoal(i)" [icon]="faTrash"></fa-icon>
+
+        <div *ngIf="goal.complete; then done else notDone"></div>
+        <ng-template #done>
+            <div class="alert alert-success" role="alert">
+               Completed!
+            </div>
+            <fa-icon class="text-danger" (click)="deleteGoal(i)" [icon]="faTrash"></fa-icon>
+        </ng-template>
+        <ng-template #notDone>
+            <div class="d-flex justify-content-between">
+                <fa-icon class="text-success" (click)="complete(i)" [icon]="faCheck"></fa-icon>
+                <fa-icon class="text-danger" (click)="deleteGoal(i)" [icon]="faTrash"></fa-icon>
+            </div>
+        </ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 </div>
