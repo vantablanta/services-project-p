@@ -12,11 +12,13 @@
             <div class="alert alert-success" role="alert">
                 Completed!
             </div>
+            <fa-icon class="text-warning" (click)="view(i)" [icon]="faEye"></fa-icon>
             <fa-icon class="text-danger" (click)="deleteGoal(i)" [icon]="faTrash"></fa-icon>
         </ng-template>
         <ng-template #notDone>
             <div class="d-flex justify-content-between">
                 <fa-icon class="text-success" (click)="complete(i)" [icon]="faCheck"></fa-icon>
+                <fa-icon class="text-warning" (click)="view(i)" [icon]="faEye"></fa-icon>
                 <fa-icon class="text-danger" (click)="deleteGoal(i)" [icon]="faTrash"></fa-icon>
             </div>
         </ng-template>
