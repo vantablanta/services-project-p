@@ -8,7 +8,8 @@ import { QuoteComponent } from './component/quote/quote.component';
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'goals', component: GoalsComponent },
-  { path: 'quotes', component: QuoteComponent }
+  { path: 'quotes', component: QuoteComponent },
+  { path: '', redirectTo:"/goals", pathMatch:"full"},
 ];
 
 @NgModule({
