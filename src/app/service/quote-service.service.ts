@@ -22,7 +22,7 @@ export class QuoteServiceService {
       author:string;
     }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(data => {
+      this.http.get<ApiResponse>(environment.apiUrl).subscribe(data => {
         this.quotes.quote = data.quote
         this.quotes.author = data.author
        resolve(data)
