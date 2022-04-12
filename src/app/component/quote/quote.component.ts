@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { QuoteClass } from 'src/app/quote-class';
 
 import { QuoteServiceService } from 'src/app/service/quote-service.service';
@@ -10,17 +9,14 @@ import { QuoteServiceService } from 'src/app/service/quote-service.service';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  quotes!: QuoteClass[]
+  quotes!: QuoteClass
 
-  constructor(private quoteService: QuoteServiceService, private http:HttpClient) { 
-
- 
-
+  constructor(private quoteService: QuoteServiceService) { 
   }
 
   ngOnInit() {
-
-    this.quotes = this.quoteService.getQuotes()
+    this.quoteService.quoteRequest()
+    this.quotes = this.quoteService.quotes
 
     // interface ApiResponse{
     //   author:string;

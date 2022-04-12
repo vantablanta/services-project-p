@@ -1,10 +1,10 @@
-<p class="mt-5 fs-3 text-center"> Todays Quote</p>
-<div *ngFor="let quote of quotes index as i" class="card float-start m-3" style="width: 18rem;">
+<p class="mt-5 fs-3 text-center"> Todays Quote from a service</p>
+<div class="card float-start m-3" style="width: 18rem;">
   <div class="card-body">
     <div class="card-text">
       <blockquote class="blockquote text-center">
-        <p>{{quotes[i].quote}}</p>
-        <footer class="blockquote-footer"><cite>{{quotes[i].author}}</cite></footer>
+        <p>{{quotes.quote}}</p>
+        <footer class="blockquote-footer"><cite>{{quotes.author}}</cite></footer>
       </blockquote>
     </div>
   </div>
