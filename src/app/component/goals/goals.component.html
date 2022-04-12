@@ -1,5 +1,5 @@
 <div class="container-fluid row  p-3">
-    <h1 class="text-center">Services Goals</h1>
+    <h1 class="text-center">Goals</h1>
     <div *ngFor="let goal of goals index as i" class="card col-md-3 p-3 m-3" style="width: 18rem;">
         <div class="card-body ">
             <h5 class="card-title">{{goal.name}}</h5>
@@ -10,7 +10,7 @@
         <div *ngIf="goal.complete; then done else notDone"></div>
         <ng-template #done>
             <div class="alert alert-success" role="alert">
-               Completed!
+                Completed!
             </div>
             <fa-icon class="text-danger" (click)="deleteGoal(i)" [icon]="faTrash"></fa-icon>
         </ng-template>
@@ -20,21 +20,5 @@
                 <fa-icon class="text-danger" (click)="deleteGoal(i)" [icon]="faTrash"></fa-icon>
             </div>
         </ng-template>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 </div>
